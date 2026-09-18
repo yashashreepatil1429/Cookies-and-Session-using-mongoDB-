@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical Notes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div>
+        <p class="eyebrow">PERSONAL KNOWLEDGE BASE</p>
+        <h1>Technical Notes <span>🚀</span></h1>
+        <p class="subtitle">Learn <b>•</b> Practice <b>•</b> Improve <b>•</b> Grow</p>
+      </div>
+      <div class="header-mark" aria-hidden="true">✦</div>
+    </div>
+  </header>
+
+  <main class="app-shell">
+    <section class="compose-panel" aria-labelledby="new-note-heading">
+      <div class="section-label"><span>01</span> CAPTURE AN IDEA</div>
+      <h2 id="new-note-heading">New note</h2>
+      <p class="panel-copy">Turn a useful thought into something you can come back to.</p>
+      <form id="note-form">
+        <label for="title">Title</label>
+        <input id="title" name="title" type="text" maxlength="120" placeholder="e.g. Understanding async/await" required>
+        <label for="description">Description</label>
+        <textarea id="description" name="description" maxlength="5000" rows="8" placeholder="Write down what you learned..." required></textarea>
+        <button type="submit" class="save-button"><span>Save note</span><span aria-hidden="true">↗</span></button>
+        <p id="form-status" class="form-status" role="status"></p>
+      </form>
+    </section>
+
+    <section class="notes-panel" aria-labelledby="all-notes-heading">
+      <div class="notes-heading">
+        <div>
+          <div class="section-label"><span>02</span> YOUR LIBRARY</div>
+          <h2 id="all-notes-heading">All notes <span id="note-count">0</span></h2>
+        </div>
+        <div class="pulse" title="Notes are stored for this browser session"><span></span> Session saved</div>
+      </div>
+      <div id="notes-grid" class="notes-grid" aria-live="polite"></div>
+      <div id="empty-state" class="empty-state">
+        <div class="empty-icon">⌁</div>
+        <h3>Your thinking starts here.</h3>
+        <p>Save your first note and build a library of useful discoveries.</p>
+      </div>
+    </section>
+  </main>
+  <script src="/script.js"></script>
+</body>
+</html>
